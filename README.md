@@ -1,11 +1,21 @@
-Devops EPAM Boot camp
+DevOps BootCamp: Bash Loops
 
-****
+Please use branch task_loops for this task that already exist in your forked repository after you has been started task
 
-This is my personal repository for different tests.
-Will use different branches for the different tasks, and main will be only for major updates.
+Task
 
-Homework:
+Develop a script that takes a string as an argument and returns its reverse version, changing uppercase letters to lowercase and back
 
-Loop - Completed (10/4)
-Conditionals - Completed (10/7)
+Check
+
+./loops1.sh "Hello World"
+
+DLROw OLLEh
+
+./loops1.sh "bash"
+
+HSAB
+
+./loops1.sh "EPAM"
+
+mape
