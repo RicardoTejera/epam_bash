@@ -21,4 +21,4 @@ for (( i=0; i<${#input_no_space}; i++ )); do
     fi
 done
 
-echo "Numbers: $numbers Symbols: $symbols Letters: $letters" # print output
+echo "Numbers: $numbers Symbols: $symbols Letters: $letters" # print output 
