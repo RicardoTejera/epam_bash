@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Function to calculate integer powers
 pow() {
     local a=$1
     local b=$2
@@ -12,6 +13,11 @@ pow() {
     echo $result
 }
 
-# Example usage
-pow 2 5   # Output: 32
-pow 3 3   # Output: 27
+# Check that exactly 2 arguments are passed
+if [[ $# -ne 2 ]]; then
+    echo "Usage: $0 <base> <exponent>"
+    exit 1
+fi
+
+# Call the function with command-line arguments
+pow "$1" "$2"
