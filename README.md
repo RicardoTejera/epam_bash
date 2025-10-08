@@ -1,11 +1,43 @@
-Devops EPAM Boot camp
+DevOps BootCamp: Bash Functions
 
-****
+In this task you need to create some functions.
 
-This is my personal repository for different tests.
-Will use different branches for the different tasks, and main will be only for major updates.
+> :warning: Please, don't call your functions in `./functions.sh` file. This would breake unit-tests. Create a new file and do `source ./functions.sh` there to test your functions.
 
-Homework:
+## Pow Task
 
-Loop - Completed (10/4)
-Conditionals - Completed (10/7)
+Develop a `pow()` function that takes two arguments `(a, b)` and raises the first argument to the power of the second `(a^b)`.
+
+### Check
+
+`pow 2 3` -> `8`
+
+`pow 2 5` -> `32`
+
+## Shortest string function
+
+Develop the `shortest()` function, which can take an unlimited number of arguments(strings) and output the shortest argument.
+
+### Check
+
+`shortest "This" "is" "Bash" "Functions" "Task"`
+
+`is`
+
+If there are more than two arguments, output each string on a new line. In an order they are passed to function.
+
+`shortest "Java" "Bash" "Python"`
+
+`Java`
+
+`Bash`
+
+## Log function
+
+Develop a `print_log()` function that takes a string as an argument and outputs the same string with the date at the beginning.
+In order for the automatic check to work, the string must be in this format: `YEAR-MONTH-DAY HOUR:MINUTES`
+
+`print_log "Hello World!"` -> `[2022-05-10 13:04] Hello World!`
+
+`print_log "Hello Bash!"` -> `[2022-05-10 13:10] Hello Bash!`
+
