@@ -8,8 +8,8 @@ func="$1"
 shift
 
 case "$func" in
-    pow)
-        pow "$@"
+    print_log)
+        print_log "$@"
         ;;
     *)
         

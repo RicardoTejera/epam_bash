@@ -17,7 +17,7 @@ pow() {
 shortest() {
 
     # If more than two arguments, print each string on a new line
-    if [[ $# -gt 2 ]]; then
+    if [[ $# -eq 0 ]]; then
         for arg in "$@"; do
             echo "$arg"
         done
@@ -32,4 +32,12 @@ shortest() {
     done
 
     echo "$min"
+}
+
+
+print_log() {
+    local message="$1"
+    local timestamp
+    timestamp=$(date +"%Y-%m-%d %H:%M")
+    echo "[$timestamp] $message"
 }
