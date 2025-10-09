@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Import the functions
-source ./functions.sh
+# Function to find and print only the shortest string
+shortest() {
+    # Handle case with no arguments
+    if [[ $# -eq 0 ]]; then
+        echo "No arguments provided"
+        return
+    fi
 
-# Allow calling functions manually
-func="$1"
-shift
+    local min="${1}"
+    for arg in "$@"; do
+        if [[ ${#arg} -lt ${#min} ]]; then
+            min="$arg"
+        fi
+    done
 
-case "$func" in
-
-    shortest)
-        shortest "$@"
-        ;;
-    *)
-        echo "Usage:"
-        echo "  $0 shortest <string1> <string2> [string3 ...]"
-        ;;
-esac
+    echo "$min"
+}
