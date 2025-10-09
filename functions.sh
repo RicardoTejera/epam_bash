@@ -15,7 +15,8 @@ pow() {
 
 # Function to find the shortest string
 shortest() {
-    # Print each string on a new line if more than 2 arguments
+
+    # If more than two arguments, print each string on a new line
     if [[ $# -gt 2 ]]; then
         for arg in "$@"; do
             echo "$arg"
