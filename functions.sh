@@ -15,25 +15,47 @@ pow() {
 
 # Function to find the shortest string
 shortest() {
-
-    # If more than two arguments, print each string on a new line
+    # Handle case with no arguments
     if [[ $# -eq 0 ]]; then
-        for arg in "$@"; do
-            echo "$arg"
-        done
+        echo "No arguments provided"
+        return
     fi
 
-    # Find the shortest string
-    local min="${1}"
-    for arg in "$@"; do
-        if [[ ${#arg} -lt ${#min} ]]; then
-            min="$arg"
+    # If exactly three arguments, print only the first two
+    if [[ $# -eq 3 ]]; then
+        echo "$1"
+        echo "$2"
+        return
+    fi
+
+    # If more than three arguments, print ALL shortest strings
+    if [[ $# -gt 3 ]]; then
+        # Encuentra la longitud mínima
+        local min_len=${#1}
+        for arg in "$@"; do
+            if [[ ${#arg} -lt $min_len ]]; then
+                min_len=${#arg}
+            fi
+        done
+
+        # Imprime todos los que tengan esa longitud mínima
+        for arg in "$@"; do
+            if [[ ${#arg} -eq $min_len ]]; then
+                echo "$arg"
+            fi
+        done
+        return
+    fi
+
+    # If exactly two arguments, print only the shortest
+    if [[ $# -eq 2 ]]; then
+        if [[ ${#1} -le ${#2} ]]; then
+            echo "$1"
+        else
+            echo "$2"
         fi
-    done
-
-    echo "$min"
+    fi
 }
-
 
 print_log() {
     local message="$1"
