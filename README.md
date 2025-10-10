@@ -1,11 +1,5 @@
-Devops EPAM Boot camp
+DevOps BootCamp: Bash Syntax
+Please use branch task_style for this task that already exist in your forked repository after you has been started task
 
-****
-
-This is my personal repository for different tests.
-Will use different branches for the different tasks, and main will be only for major updates.
-
-Homework:
-
-Loop - Completed (10/4)
-Conditionals - Completed (10/7)
+Task
+In this task you need to fix the script: ./game.sh accroding to Bash Style Guide. To test, what issues this script is having, use: shellcheck tool.
